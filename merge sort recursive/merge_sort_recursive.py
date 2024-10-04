@@ -16,8 +16,8 @@ def merge_sort(values):
         return values
     # We split unsorted list two pieces.
     middle_index = len(values) // 2
-    left_values = values[:middle_index]
-    right_values = values[middle_index:]
+    left_values = merge_sort(values[:middle_index])
+    right_values = merge_sort(values[middle_index:])
     sorted_list = []
     left_index = 0
     right_index = 0
